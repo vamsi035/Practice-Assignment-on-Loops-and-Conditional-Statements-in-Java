@@ -1,0 +1,310 @@
+1)
+import java.util.*;
+import java.util.Scanner;
+import java.io.*;
+import java.lang.Math;
+class Multiplication
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int num=5;
+        for(int i=1;i<=10;i++)
+        {
+            System.out.println(num+"x"+i+"="+num*i);
+        }
+    }
+}
+2)
+import java.util.Scanner;
+import java.io.*;
+import java.lang.Math;
+class Percentage
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        double marOb=650;
+        double totMar=700;
+        String grade;
+        Double gpa;
+        double percent=(marOb/totMar)*100;
+        if(percent>90)
+        {
+            grade="A";
+            gpa=4.0;
+        }
+        else if(percent>80)
+        {
+            grade="B";
+            gpa=3.0;
+        }
+        else if(percent>70)
+        {
+            grade="C";
+            gpa=2.0;
+        }
+        else if(percent>60)
+        {
+            grade="D";
+            gpa=1.0;
+        }
+        else{
+            grade="F";
+            gpa=0.0;
+        }
+        System.out.println("percent:"+percent+" grade "+grade+" gpa="+gpa);
+        
+
+    }
+}
+
+3)
+import java.util.*;
+import java.util.Scanner;
+import java.io.*;
+import java.lang.Math;
+class Swap
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int a=63;
+        int b=15;
+        
+        int temp=a;
+        a=b;
+        b=temp; 
+        
+        System.out.println("a:"+ a);
+        System.out.println("b:"+ b);
+    }
+}
+4)
+import java.util.*;
+import java.util.Scanner;
+import java.io.*;
+import java.lang.Math;
+class MenuDriven
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        char choice;
+        do{
+            System.out.println("Menu based app - Even/Odd Checker");
+            System.out.println("Please enter the number:");
+            int n=sc.nextInt();
+            
+            if(n%2==0)
+            {
+                System.out.println(n+" is an EVEN Number");
+            }
+            else if(n%2!=0)
+            {
+                System.out.println(n+" is an ODD Number");
+            }
+            System.out.println("\nDo you want to Continue:(y/n)");
+            choice=sc.next().charAt(0);
+        }while(choice=='Y'||choice=='y');
+    }
+}
+5)
+import java.util.*;
+import java.util.Scanner;
+import java.io.*;
+import java.lang.Math;
+class UnitConversion
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        char choice;
+        do{
+            System.out.println("Menu based app - Unit conversion for Distance");
+            System.out.println("CM to M");
+            System.out.println("M to KM");
+            System.out.println("KM to M");
+            System.out.println("M to CM");
+            
+            System.out.println("Enter your menu");
+            int menu=sc.nextInt();
+            switch(menu)
+            {
+                case 1:
+                System.out.print("Please enter CM value: ");
+                double cm=sc.nextDouble();
+                double m=cm/100;
+                System.out.printf("%.2fcm=%.2fm",cm,m);
+                break;
+                case 2:
+                System.out.printf("Please enter the M Value: ");
+                double m1=sc.nextDouble();
+                double km=m1/1000;
+                System.out.printf("%.2fm1=%.2fkm",m1,km);
+                break;
+                case 3:
+                System.out.printf("Please enter the KM Value: ");
+                double km1=sc.nextDouble();
+                double m2=1000*km1;
+                System.out.printf("%.2fkm1=%.2fm2",km1,m2);
+                break;
+                case 4:
+                System.out.printf("Please enter M value:");
+                double m3=sc.nextDouble();
+                double cm1=100*m3;
+                System.out.printf("%.2fm3=%.2fcm1",m3,cm1);
+                default:
+                System.out.printf("Invalid menu choice");
+                break;
+            }
+            System.out.println("  Do you want to Continue:(y/n)");
+            choice=sc.next().charAt(0);
+        }while(choice=='y'||choice=='Y');
+    }
+}
+
+6)
+import java.util.*;
+import java.util.Scanner;
+public class Trianglepattern {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n = sc.nextInt();
+        for(int i=1;i<=n;i+=2)
+        {
+            for(int j=0;j<i;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i=n-2;i>0;i-=2)
+        {
+            for(int j=0;j<i;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();            
+        }
+    }
+}
+
+
+7)
+import java.util.*;
+import java.util.Scanner;
+import java.io.*;
+import java.lang.Math;
+class Asteriks
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=5;
+        for(int i=n;i>=1;i--)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i=2;i<=n;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print("*");
+            } 
+            System.out.println();
+        }
+    }
+}
+8)
+import java.util.*;
+import java.util.Scanner;
+import java.io.*;
+import java.lang.Math;
+class Larsmaavg
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int num1=10;
+        int num2=20;
+        int num3=30;
+        int avg=0;
+        int lar=num1;
+        if(lar<num2)
+        {
+            lar=num2;
+        }
+        if(lar<num3)
+        {
+            lar=num3;
+        }
+        System.out.println(lar+" ");
+        int smal=num1;
+        if(smal>num2)
+        {
+            smal=num2;
+        }
+        if(smal>num3)
+        {
+            smal=num3;
+        }
+        System.out.println(smal+" ");
+        avg=(num1+num2+num3)/3;
+        System.out.println(avg);
+    }
+
+}
+9)
+import java.util.*;
+import java.util.Scanner;
+import java.io.*;
+import java.lang.Math;
+class Primenum
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int num=23;
+        int f=0;
+        for(int i=1;i*i<=num;i++)
+        {
+            if(num%i!=0)
+            {
+                f=1;
+            }
+        }
+        if(f==1)
+        {
+            System.out.println("The given number "+num+" is a Prime number");
+        }
+        else
+        {
+            System.out.println("The given number "+num+" is NOT a Prime number.");
+        }
+    }
+}
+10)
+import java.util.*;
+import java.util.Scanner;
+import java.io.*;
+import java.lang.Math;
+class Substring
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        String s="Mangalyaan";
+        int i=0,n=5;
+        String s1="";
+        s1=s.substring(i,n+1);
+        System.out.println("subString of Mangalyaan from 0 to 5 is:" +s1);
+    }
+}
+
+
+
